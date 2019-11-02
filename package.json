@@ -1,0 +1,31 @@
+{
+  "name": "hodo_server",
+  "version": "1.0.0",
+  "description": "React Passport Example",
+  "main": "hodo_dashboard.js",
+  "scripts": {
+    "server": "node index.js",
+    "client": "cd client && npm run start",
+    "start": "concurrently \"nodemon\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandria 'Hannah' Isadora Patellis",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.4",
+    "morgan": "^1.9.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "validator": "^7.0.0"
+  }
+}
