@@ -16,9 +16,14 @@ function validateSignupForm(payload) {
   let isFormValid = true;
   let message = '';
 
-  if (!payload || typeof payload.email !== 'string' || !validator.isEmail(payload.email)) {
+ // if (!payload || typeof payload.email !== 'string' || !validator.isEmail(payload.email)) {
+  //   isFormValid = false;
+  //   errors.email = 'Please provide a correct email address.';
+  // }
+
+  if (!payload || typeof payload.username !== 'string') {
     isFormValid = false;
-    errors.email = 'Please provide a correct email address.';
+    errors.username = 'Please provide a correct username.';
   }
 
   if (!payload || typeof payload.password !== 'string' || payload.password.trim().length < 8) {
@@ -54,9 +59,9 @@ function validateLoginForm(payload) {
   let isFormValid = true;
   let message = '';
 
-  if (!payload || typeof payload.email !== 'string' || payload.email.trim().length === 0) {
+  if (!payload || typeof payload.username !== 'string' || payload.username.trim().length === 0) {
     isFormValid = false;
-    errors.email = 'Please provide your email address.';
+    errors.username = 'Please provide your username.';
   }
 
   if (!payload || typeof payload.password !== 'string' || payload.password.trim().length === 0) {
@@ -85,17 +90,16 @@ router.post('/signup', (req, res, next) => {
     });
   }
 
-
   return passport.authenticate('local-signup', (err) => {
     if (err) {
       if (err.name === 'MongoError' && err.code === 11000) {
-        // the 11000 Mongo code is for a duplication email error
-        // the 409 HTTP status code is for conflict error
+        // The 11000 Mongo code is for a duplication username error
+        // The 409 HTTP status code is for conflict error
         return res.status(409).json({
           success: false,
           message: 'Check the form for errors.',
           errors: {
-            email: 'This email is already taken.'
+            username: 'This username is already taken.'
           }
         });
       }
@@ -123,7 +127,6 @@ router.post('/login', (req, res, next) => {
     });
   }
 
-
   return passport.authenticate('local-login', (err, token, userData) => {
     if (err) {
       if (err.name === 'IncorrectCredentialsError') {
@@ -138,7 +141,6 @@ router.post('/login', (req, res, next) => {
         message: 'Could not process the form.'
       });
     }
-
 
     return res.json({
       success: true,

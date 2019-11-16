@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import SignUpForm from '../components/SignUpForm.jsx';
 import API from '../utils/API';
 
 class SignUpPage extends React.Component {
@@ -8,7 +6,7 @@ class SignUpPage extends React.Component {
   state = {
     errors: {},
     user: {
-      email: '',
+      username: '',
       name: '',
       password: ''
     }
@@ -24,10 +22,10 @@ class SignUpPage extends React.Component {
     event.preventDefault();
     
     // create a string for an HTTP body message
-    const { name, email, password } = this.state.user;
+    const { name, username, password } = this.state.user;
 
-    //const formData = `email=${email}&password=${password}`;
-    API.signUp({name, email, password}).then(res => {
+    //const formData = `username=${username}&password=${password}`;
+    API.signUp({name, username, password}).then(res => {
       // change the component-container state
         // set a message
         localStorage.setItem('successMessage', res.data.message);
@@ -64,24 +62,63 @@ class SignUpPage extends React.Component {
     });
   }
 
-  /**
-   * Render the component.
-   */
   render() {
     return (
-      <SignUpForm
-        onSubmit={this.processForm}
-        onChange={this.changeUser}
-        errors={this.state.errors}
-        user={this.state.user}
-      />
+      <div>
+        <form action="/" onSubmit={this.processForm}>
+          <h1>Sign Up</h1>
+
+          {this.state.errors.summary && <p className="error-message">{this.state.errors.summary}</p>}
+
+          <div>
+            <label htmlFor="signup-form-name">Name</label>
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              id="signup-form-name"
+              aria-describedby="signup-nameHelp"
+              value={this.state.user.name}
+              onChange={this.changeUser}
+            />
+            <small id="signup-nameHelp" className="form-text text-danger">{this.state.errors.name}</small>
+          </div>
+
+          <div>
+            <label htmlFor="signup-form-name">Username</label>
+            <input
+              type="text"
+              name="username"
+              className="form-control"
+              id="signup-form-username"
+              aria-describedby="signup-usernameHelp"
+              value={this.state.user.username}
+              onChange={this.changeUser}
+            />
+            <small id="signup-usernameHelp" className="form-text text-danger">{this.state.errors.username}</small>
+          </div>
+
+          <div>
+            <label htmlFor="signup-form-password">Password</label>
+            <input
+              type="password"
+              name="password"
+              className="form-control"
+              id="signup-form-password"
+              aria-describedby="signup-passwordHelp"
+              value={this.state.user.password}
+              onChange={this.changeUser}
+            />
+            <small id="signup-passwordHelp" className="form-text text-danger">{this.state.errors.password}</small>
+          </div>
+
+          <div>
+            <button type="submit" className="btn btn-primary">Signup</button>
+          </div>
+        </form>
+      </div>
     );
   }
-
 }
-
-SignUpPage.contextTypes = {
-  router: PropTypes.object.isRequired
-};
 
 export default SignUpPage;

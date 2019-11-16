@@ -1,18 +1,17 @@
-//const User = require('mongoose').model('User');
-const db = require('../models')
+const db = require('../models');
 const PassportLocalStrategy = require('passport-local').Strategy;
 
 /**
  * Return the Passport Local Strategy object.
  */
 module.exports = new PassportLocalStrategy({
-  usernameField: 'email',
+  usernameField: 'username',
   passwordField: 'password',
   session: false,
   passReqToCallback: true
-}, (req, email, password, done) => {
+}, (req, username, password, done) => {
   const userData = {
-    email: email.trim(),
+    username: username.trim(),
     password: password.trim(),
     name: req.body.name.trim()
   };

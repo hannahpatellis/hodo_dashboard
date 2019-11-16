@@ -1,7 +1,7 @@
 import React from 'react';
 import Auth from '../utils/Auth';
-import Dashboard from '../components/Dashboard.jsx';
 import API from '../utils/API';
+import { Link } from 'react-router-dom'
 
 class DashboardPage extends React.Component {
   state = {
@@ -22,11 +22,12 @@ class DashboardPage extends React.Component {
     })
   }
 
-  /**
-   * Render the component.
-   */
   render() {
-    return (<Dashboard secretData={this.state.secretData} user={this.state.user} />);
+    return (
+      <div>
+        <Link to="/logout">Log out</Link>
+      </div>
+    );
   }
 
 }

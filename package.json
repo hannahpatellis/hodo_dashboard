@@ -1,7 +1,7 @@
 {
   "name": "hodo_server",
   "version": "1.0.0",
-  "description": "React Passport Example",
+  "description": "Houses of Design Olympics house point dashboard application - API Server",
   "main": "hodo_dashboard.js",
   "scripts": {
     "server": "node index.js",
@@ -20,6 +20,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
+    "dotenv": "^8.2.0",
     "express": "^4.15.4",
     "jsonwebtoken": "^7.4.1",
     "mongoose": "^5.7.5",

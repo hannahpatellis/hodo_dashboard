@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 import Auth from '../utils/Auth';
 import { Route, Redirect } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       }}/>
     )
   )}/>
-)
+);
 
 const LoggedOutRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
@@ -27,12 +26,12 @@ const LoggedOutRoute = ({ component: Component, ...rest }) => (
       <Component {...props} {...rest} />
     )
   )}/>
-)
+);
 
 const PropsRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     <Component {...props} {...rest} />
   )}/>
-)
+);
 
 export { PrivateRoute, LoggedOutRoute, PropsRoute };
