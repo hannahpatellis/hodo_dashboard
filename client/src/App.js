@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {
   BrowserRouter as Router,
   Route
@@ -37,7 +35,7 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <div>
         <Router>
             <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
             <PrivateRoute path="/dashboard" component={DashboardPage}/>
@@ -45,7 +43,7 @@ class App extends Component {
             <LoggedOutRoute path="/signup" component={SignUpPage}/>
             <Route path="/logout" component={LogoutFunction}/>
         </Router>
-      </MuiThemeProvider>
+      </div>
     );
   }
 }

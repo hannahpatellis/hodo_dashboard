@@ -2,6 +2,8 @@ import React from 'react';
 import Auth from '../utils/Auth';
 import API from '../utils/API';
 
+const logo = require('../images/hodo.png');
+
 class LoginPage extends React.Component {
   state = {
     errors: {},
@@ -77,47 +79,55 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <form action="/" onSubmit={this.processForm}>
-          <h1>Login</h1>
-
-          {this.state.successMessage && <p className="success-message">{this.state.successMessage}</p>}
-          {this.state.errors.summary && <p className="error-message">{this.state.errors.summary}</p>}
-
-          <div>
-            <label htmlFor="login-form-username">Username</label>
-            <input
-              type="text"
-              name="username"
-              className="form-control"
-              id="login-form-username"
-              placeholder="Enter username"
-              aria-describedby="login-usernameHelp"
-              value={this.state.user.username}
-              onChange={this.changeUser}
-            />
-            <small id="login-usernameHelp" class="form-text text-danger">{this.state.errors.username}</small>
+      <div className='container'>
+        <div className='row'>
+          <div className='admin-logo'>
+            <img src={logo} alt='Houses of Design Olympics' width='400px' />
           </div>
+        </div>
+        <div className='row mt-20p'>
+          <div className='col-md-12 col-lg-4'></div>
+          <div className='col-md-12 col-lg-4'>
+            <form action='/' onSubmit={this.processForm}>
 
-          <div>
-            <label htmlFor="login-form-username">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control"
-              id="login-form-password"
-              placeholder="Enter password"
-              aria-describedby="login-passwordHelp"
-              value={this.state.user.password}
-              onChange={this.changeUser}
-            />
-            <small id="login-passwordHelp" className="form-text text-danger">{this.state.errors.password}</small>
-          </div>
+              {this.state.successMessage && <p className='text-success'>{this.state.successMessage}</p>}
 
-          <div>
-            <button type="submit" className="btn btn-primary">Login</button>
+              <div>
+                <label htmlFor='login-form-username'>Username</label>
+                <input
+                  type='text'
+                  name='username'
+                  className='form-control'
+                  id='login-form-username'
+                  placeholder='Enter username'
+                  aria-describedby='login-usernameHelp'
+                  value={this.state.user.username}
+                  onChange={this.changeUser}
+                />
+                <small id='login-usernameHelp' className='form-text text-danger'>{this.state.errors.username}</small>
+              </div>
+
+              <div className='mt-3'>
+                <label htmlFor='login-form-username'>Password</label>
+                <input
+                  type='password'
+                  name='password'
+                  className='form-control'
+                  id='login-form-password'
+                  placeholder='Enter password'
+                  aria-describedby='login-passwordHelp'
+                  value={this.state.user.password}
+                  onChange={this.changeUser}
+                />
+                <small id='login-passwordHelp' className='form-text text-danger'>{this.state.errors.password}</small>
+              </div>
+
+              <div>
+                <button type='submit' className='btn btn-primary mt-4'>Login</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     );
   }

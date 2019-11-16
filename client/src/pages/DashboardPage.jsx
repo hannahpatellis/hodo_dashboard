@@ -1,31 +1,115 @@
 import React from 'react';
 import Auth from '../utils/Auth';
 import API from '../utils/API';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
+const logo = require('../images/hodo.png');
 
 class DashboardPage extends React.Component {
   state = {
-    secretData: '',
-    user: {}
+    data: [],
+    user: {},
+    Gestalt: 0,
+    Heuristics: 0,
+    Context: 0
   }
 
-  /**
-   * This method will be executed after initial rendering.
-   */
-  componentDidMount() {
-    API.dashboard(Auth.getToken())
-    .then(res => {
-      this.setState({
-          secretData: res.data.message,
-          user: res.data.user
+  getData = () => {
+    API.dashboard()
+      .then(res => {
+        this.setState({
+          data: res.data
         });
-    })
+      });
+  }
+
+  handlePointInputChange = event => {
+    const house = event.target.name;
+    const value = event.target.value;
+
+    this.setState({
+      [house]: value
+    });
+  }
+
+  handlePointChange = (house, points) => {
+    API.points(house, points, Auth.getToken())
+      .then(res => {
+        this.getData();
+      });
+  }
+
+  handleOwl = house => {
+    API.owl(house, Auth.getToken())
+      .then(res => {
+        this.getData();
+      });
+  }
+
+  handleWeekReset = () => {
+    const confirmation = window.confirm('Are you sure you want to reset the week count for all houses?');
+    
+    if(confirmation) {
+      API.weekreset(Auth.getToken())
+        .then(res => {
+          this.getData();
+        });
+    }
+  }
+
+  componentDidMount() {
+    this.getData();
   }
 
   render() {
     return (
-      <div>
-        <Link to="/logout">Log out</Link>
+      <div className='container'>
+        <div className='row admin-nav'>
+          <div className='admin-logo'>
+            <img src={logo} alt='Houses of Design Olympics' width='400px' />
+          </div>
+          <div className='admin-nav-right'>
+            <Link to='/logout' className='admin-nav-right'>Logout</Link>
+            <hr />
+            <a href='#' onClick={this.handleWeekReset}>Reset week</a>
+          </div>
+        </div>
+        <div className='row mt-10p'>
+
+          {this.state.data ? this.state.data.map(item => (
+            <div className='col-12 col-md-4 col-xl-4 mb-5' key={item.house}>
+
+              <div className='card'>
+                <div className='card-body text-center'>
+                  {/* <p><img className='houseImage' height='200' src={item.owl ? `img/${item.owlimage}` : `img/${item.image}`} alt={item.house} /></p> */}
+                  <h5>House of {item.house}</h5>
+                  <h6 className='mb-2 text-muted'>House TA: {item.head}</h6>
+                  <h1><strong>{item.points}</strong></h1>
+                  <p>Points this week: {item.weekpoints}</p>
+
+                  <hr />
+
+                  <div className='input-group'>
+                    <div className='input-group-prepend'>
+                      <button onClick={() => this.handlePointChange(item.house, -1)} className='btn btn-outline-secondary' type='button' id={`admin-minus-${item.house}`}>-1</button>
+                      <button onClick={() => this.handlePointChange(item.house, 1)} className='btn btn-outline-secondary' type='button' id={`admin-plus-${item.house}`}>+1</button>
+                    </div>
+                    <input type='text' onChange={this.handlePointInputChange} name={item.house} className='form-control' placeholder='' aria-label='Number of points to add' value={this.state[item.house]} />
+                    <div className='input-group-append'>
+                      <button onClick={() => this.handlePointChange(item.house, this.state[item.house])} className='btn btn-primary' type='button' id={`admin-add-${item.house}`}>+{this.state[item.house]}</button>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <button type='button' onClick={() => this.handleOwl(item.house)} className={item.owl ? 'btn btn-secondary btn-lg btn-block' : 'btn btn-primary btn-lg btn-block'}>{item.owl ? 'Has the owl' : 'Give the owl'}</button>
+                </div>
+              </div>
+
+            </div>
+          )) : ''}
+
+        </div>
       </div>
     );
   }
