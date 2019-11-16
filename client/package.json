@@ -2,6 +2,7 @@
   "name": "hodo_client",
   "version": "1.0.0",
   "description": "Houses of Design Olympics house point dashboard application - Frontend Client",
+  "author": "Alexandria 'Hannah' Isadora Patellis",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
