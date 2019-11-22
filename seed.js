@@ -20,7 +20,8 @@ const houseSeed = [
     'points': 0,
     'weekpoints': 0,
     'owl': false,
-    'image': 'gestalt.png'
+    'image': 'gestalt.png',
+    'hex': 'D54D49'
   },
   {
     'house': 'Context',
@@ -28,7 +29,8 @@ const houseSeed = [
     'points': 0,
     'weekpoints': 0,
     'owl': false,
-    'image': 'context.png'
+    'image': 'context.png',
+    'hex': '7A52E0'
   },
   {
     'house': 'Heuristics',
@@ -36,7 +38,8 @@ const houseSeed = [
     'points': 0,
     'weekpoints': 0,
     'owl': false,
-    'image': 'heuristics.png'
+    'image': 'heuristics.png',
+    'hex': '009478'
   }
 ];
 

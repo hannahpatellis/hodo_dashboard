@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 
 const logo = require('../images/hodo.png');
 
+const houseIcons = {
+  Gestalt: require('../images/Gestalt.png'),
+  Heuristics: require('../images/Heuristics.png'),
+  Context: require('../images/Context.png')
+}
+
 class DashboardPage extends React.Component {
   state = {
     data: [],
@@ -81,7 +87,7 @@ class DashboardPage extends React.Component {
 
               <div className='card'>
                 <div className='card-body text-center'>
-                  {/* <p><img className='houseImage' height='200' src={item.owl ? `img/${item.owlimage}` : `img/${item.image}`} alt={item.house} /></p> */}
+                  <img className='admin-houseimg' height='85' src={houseIcons[item.house]} alt={item.house} />
                   <h5>House of {item.house}</h5>
                   <h6 className='mb-2 text-muted'>House TA: {item.head}</h6>
                   <h1><strong>{item.points}</strong></h1>
@@ -102,7 +108,7 @@ class DashboardPage extends React.Component {
 
                   <hr />
 
-                  <button type='button' onClick={() => this.handleOwl(item.house)} className={item.owl ? 'btn btn-secondary btn-lg btn-block' : 'btn btn-primary btn-lg btn-block'}>{item.owl ? 'Has the owl' : 'Give the owl'}</button>
+                  <button type='button' onClick={() => this.handleOwl(item.house)} className={item.owl ? 'btn btn-secondary btn-lg btn-block' : 'btn btn-primary btn-lg btn-block'}>{item.owl ? 'Has The Owl' : 'Give The Owl'}</button>
                 </div>
               </div>
 

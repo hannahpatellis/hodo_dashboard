@@ -11,7 +11,8 @@ const HouseSchema = new Schema({
   points: Number,
   weekpoints: Number,
   owl: Boolean,
-  image: String
+  image: String,
+  hex: String
 });
 
 module.exports = mongoose.model('House', HouseSchema);
