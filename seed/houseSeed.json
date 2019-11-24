@@ -1,0 +1,29 @@
+[
+    {
+      "house": "Gestalt",
+      "head": "Dishanta",
+      "points": 0,
+      "weekpoints": 0,
+      "owl": false,
+      "image": "gestalt.png",
+      "hex": "D54D49"
+    },
+    {
+      "house": "Context",
+      "head": "Adriana",
+      "points": 0,
+      "weekpoints": 0,
+      "owl": false,
+      "image": "context.png",
+      "hex": "7A52E0"
+    },
+    {
+      "house": "Heuristics",
+      "head": "Devin",
+      "points": 0,
+      "weekpoints": 0,
+      "owl": false,
+      "image": "heuristics.png",
+      "hex": "009478"
+    }
+]

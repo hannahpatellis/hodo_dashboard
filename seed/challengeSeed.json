@@ -1,0 +1,294 @@
+[
+    {
+        "title": "Give a critique in class",
+        "points": 1,
+        "plus": false,
+        "details": [
+            "Must list at least one thing to be improved and one thing that is working",
+            "Extra points if it’s very thorough",
+            "No limit"
+        ]
+    },
+    {
+        "title": "Give a critique in the #show-n-crit channel",
+        "points": 2,
+        "plus": false,
+        "details": [
+            "Must list at least one thing to be improved and one thing that is working",
+            "One critique per student per post",
+            "Extra points if it’s very thorough",
+            "No limit"
+        ]
+    },
+    {
+        "title": "UX/UI analysis of an app",
+        "points": 5,
+        "plus": true,
+        "details": [
+            "Write at least 300 words on your analysis of the user experience and user interface design in any application or operating system. (If you’re analysing an operating system, 450 word minimum because there’s so much to talk about!)",
+            "8 points for OS analysis",
+            "Can be earned an unlimited number of times each week",
+            "Can be posted to #hd-olympics or sent to the instructor directly over Slack"
+        ]
+    },
+    {
+        "title": "Design for Daily UI",
+        "points": 10,
+        "plus": false,
+        "details": [
+            "Get 10 points for every Daily UI challenge you do (https://www.dailyui.co/)",
+            "Can be earned an unlimited number of times each week",
+            "Earn 4 extra points for including interactions",
+            "Earn 4 extra points for animations",
+            "Post your design in #dailyui"
+        ]
+    },
+    {
+        "title": "Make a spontaneous UI design",
+        "points": 10,
+        "plus": true,
+        "details": [
+            "Get 10 points for doing a spontaneous UI design",
+            "Earn 4 extra points for including interactions",
+            "Earn 4 extra points for animations",
+            "Get 2 extra points for each additional screen (screens with only small differences may not be counted)",
+            "There are no real restrictions here — just make a UI! It can be a mobile app, desktop app, or a web app for any platform. Or get crazy! Do an Xbox app or an Android Auto app!",
+            "Can be earned an unlimited number of times each week, however you can not turn in iterations as individual entries. Final design only.",
+            "Go through the UI process and document it for an extra 10 points",
+            "User test 2+ people for an extra 10 points. No fellow students or instructional team members can be used for testing. Make sure to record your test and give insights.",
+            "Make a case study for 5 extra points",
+            "Can be posted to #hd-olympics or sent to the instructor directly over Slack"
+        ]
+    },
+    {
+        "title": "Spontaneous UX Challenge",
+        "points": 40,
+        "plus": true,
+        "details": [
+            "Get 40 points if you do a spontaneous UX project",
+            "Must include user research",
+            "Make a case study for 8 extra points",
+            "Can be posted to #hd-olympics or sent to the instructor directly over Slack"
+        ]
+    },
+    {
+        "title": "Complete a personal project ",
+        "points": 50,
+        "plus": true,
+        "details": [
+            "Complete a personal UX/UI project for an application",
+            "If it’s a web application, it must be responsive",
+            "Points awarded based on complexity of design and complexity of thought process",
+            "This should be a well thought out, extensive project like the ones we do for homework",
+            "Can be earned an unlimited number of times",
+            "Can be posted to #hd-olympics or sent to the instructor directly over Slack"
+        ]
+    },
+    {
+        "title": "Go to the design museum",
+        "points": 6,
+        "plus": false,
+        "details": [
+            "Can be earned once per month per person",
+            "Post a picture of you inside the museum in #hd-olympics"
+        ]
+    },
+    {
+        "title": "Work with a real life client",
+        "points": 100,
+        "plus": true,
+        "details": [
+            "Work on a UX or UI project for a real life client",
+            "You must use the design process and do user research",
+            "Does not include existing clients or clients through an existing full-time job",
+            "Can be earned an unlimited number of times",
+            "Discuss with the instructor to receive points"
+        ]
+    },
+    {
+        "title": "Brand design",
+        "points": 17,
+        "plus": true,
+        "details": [
+            "Go through the design process to create branding for something or someone",
+            "Think about brand statement, voice, style guides, UI style guides, logos, and other materials",
+            "Can be earned once per week per person",
+            "Can be posted to #hd-olympics or sent to the instructor directly over Slack"
+        ]
+    },
+    {
+        "title": "Graphic design",
+        "points": 10,
+        "plus": true,
+        "details": [
+            "Just design something! Using desktop graphic design applications is important for a UX/UI designer. Get comfortable with the tool of your choice!",
+            "Must be at least 4” x 6” or 600px x 600px",
+            "Points awarded based on complexity of design and complexity of thought process",
+            "2 extra points if you use Sketch, Adobe Photoshop, or Adobe Illustrator",
+            "Can be earned an unlimited number of times a week",
+            "Can be posted to #hd-olympics or sent to the instructor directly over Slack"
+        ]
+    },
+    {
+        "title": "House study group",
+        "points": 5,
+        "plus": true,
+        "details": [
+            "Minimum 3 people of the same house",
+            "5 points for the first three students and 1 point for each additional student",
+            "Can be earned an unlimited number of times a week",
+            "You must submit a selfie to #hd-olympics with everyone in it and tag each member for it to count",
+            "Cannot be done remotely"
+        ]
+    },
+    {
+        "title": "Mixed house study group",
+        "points": 3,
+        "plus": true,
+        "details": [
+            "Minimum 4 students of any house",
+            "3 points per person awarded to their house",
+            "Can be earned an unlimited number of times a week",
+            "You must submit a selfie to #hd-olympics with everyone in it and tag each member for it to count",
+            "Cannot be done remotely"
+        ]
+    },
+    {
+        "title": "Remote study group",
+        "points": 2,
+        "plus": true,
+        "details": [
+            "Minimum 3 students of any house",
+            "Earn 2 points per house plus 1 points per person awarded to their house",
+            "Can be earned an unlimited number of times a week",
+            "You must submit a screencap (with everyone’s webcams on) to #hd-olympics and tag each member for it to count"
+        ]
+    },
+    {
+        "title": "Bookstore selfie",
+        "points": 3,
+        "plus": false,
+        "details": [
+            "Take a selfie of you at a bookstore reading a design-related book and give a brief synopsis of what you read",
+            "You must read at least one chapter of the book",
+            "Can be earned once per student per week",
+            "Selfie must be posted on #hd-olympics along with a brief summary of what you learned"
+        ]
+    },
+    {
+        "title": "Design meetup",
+        "points": 20,
+        "plus": true,
+        "details": [
+            "Go to a design meetup!",
+            "Can be earned an unlimited number of times each week",
+            "3 extra points per person if more than one person goes from the same house",
+            "If people from multiple houses go, 20 points per house plus 3 extra points per person",
+            "Take a selfie while you’re there and post it to #hd-olympics"
+        ]
+    },
+    {
+        "title": "House pride",
+        "points": 1,
+        "plus": false,
+        "details": [
+            "Wear your house colors to class!",
+            "Socks and jeans don’t count — unless they’re really special!",
+            "Can be earned once per student per class",
+            "House pride will be counted at the beginning of class",
+            "1 extra point per house if the instructor forgets!"
+        ]
+    },
+    {
+        "title": "Come to office hours",
+        "points": 3,
+        "plus": true,
+        "details": [
+            "Be in class within 10 minutes of the start of office hours to earn points",
+            "Ask a TA a question about class materials or a UX/UI design topic and earn 2 extra points"
+        ]
+    },
+    {
+        "title": "Write a blog post",
+        "points": 10,
+        "plus": true,
+        "details": [
+            "Must be at least 250 words",
+            "Can be earned once per week",
+            "Earn 10 extra points if you post to Medium or another high-traffic public posting platform",
+            "Post a link to your post to #hd-olympics"
+        ]
+    },
+    {
+        "title": "Code a website",
+        "points": 10,
+        "plus": true,
+        "details": [
+            "Design and build something using code written by hand",
+            "At least 10 points for using just HTML + CSS",
+            "Extra 10 points (minimum) for use of JavaScript",
+            "Extra 10 points (minimum) for use of AJAX",
+            "7-28 points for each additional page",
+            "Additional points are awarded for complexity",
+            "You can use frameworks or libraries",
+            "For the AJAX requirement, you must use jQuery’s AJAX method to make at least one API call of any type and then do something with the returned data (display it on the screen)",
+            "Upload your site to GitHub and host it with GitHub Pages (or an alternative host) and submit the link to #hd-olympics"
+        ]
+    },
+    {
+        "title": "Rebuild the House Points Dashboard",
+        "points": 35,
+        "plus": true,
+        "details": [
+            "Use HTML, CSS, JavaScript, and jQuery’s AJAX method to rebuild the house points website",
+            "Must include some UI ideation and prototyping",
+            "Do research (user research or testing) for up to 10 extra points",
+            "Additional points are awarded for complexity",
+            "You must make a GET request to https://hodo.hannahap.com/public/points to receive all the point information needed and then display it on the page",
+            "Additionally, make a GET request to https://hodo.hannahap.com/public/challenges to receive all the challenge information needed and then display it on the page for 9 extra points (minimum)",
+            "For the AJAX requirement, you must use jQuery’s AJAX method to make at least one API call of any type and then do something with the returned data (display it on the screen)",
+            "Upload your site to GitHub and host it with GitHub Pages (or an alternative host) and submit the link to #hd-olympics"
+        ]
+    },
+    {
+        "title": "Build a website in Webflow",
+        "points": 10,
+        "plus": true,
+        "details": [
+            "Use Webflow to design a website",
+            "Must include some UI ideation and prototyping",
+            "Do research (user research or testing) for up to 10 extra points",
+            "Earn 7 extra points minimum per additional page",
+            "Additional points are awarded for complexity",
+            "Publish your site and post a link in #hd-olympics"
+        ]
+    },
+    {
+        "title": "Build a website in a website editor other than Webflow",
+        "points": 8,
+        "plus": true,
+        "details": [
+            "Use any website editor (Wix, Squarespace, et cetera) to build a website",
+            "Must include some UI ideation and prototyping",
+            "Do research (user research or testing) for up to 10 extra points",
+            "Earn 6 extra points minimum per additional page",
+            "Additional points are awarded for complexity",
+            "Publish your site and post a link in #hd-olympics"
+        ]
+    },
+    {
+        "title": "Flash mob",
+        "points": 45,
+        "plus": true,
+        "details": [
+            "It is what it sounds like!",
+            "Do a public flash mob with your classmates. Can be to any song so long as it’s not vulgar (needs to be public-appropriate)",
+            "Minimum of 3 people",
+            "45 points per house that participates plus 5 extra points per person plus two points for all houses for each person who joins who is NOT part of class",
+            "10 extra points per additional song, maximum three songs",
+            "Must be recorded and posted to #hd-olympics",
+            "Cannot be done in class, nor can it disrupt other classes",
+            "No, there’s nothing design related about this but I still dare you to do it"
+        ]
+    }
+]
