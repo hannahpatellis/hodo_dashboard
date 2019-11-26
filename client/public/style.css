@@ -22,6 +22,13 @@ img.admin-houseimg {
 
 /* Homepage */
 /* -------------------------------- */
+div.logo {
+  background-image: url('assets/images/hodo.png');
+  width: 450px;
+  height: 108px;
+  background-size: cover;
+}
+
 div.stage {
   margin: 0 auto;
   width: 80%;
@@ -37,13 +44,11 @@ header.stage-row {
   position: absolute;
   top: -12px;
 }
-
 main.stage-row-houseCards {
   justify-content: center;
   align-items: center;
   margin-top: 150px;
 }
-
 section.houseCard {
   height: 320px;
   width: 260px;
@@ -66,7 +71,6 @@ h1.houseCard-spot {
   font-weight: 400;
   font-size: 25px;
   margin: 0;
-
 }
 h2.houseCard-name {
   font-weight: 300;
@@ -84,6 +88,31 @@ h4.houseCard-weekscore {
   margin: 0;
 }
 
+div.stage-row-description {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.stage-row-card {
+  width: 40%;
+}
+.stage-row-card-outline {
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+div.stage-row-challenges {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
 /* Modifiers */
 /* -------------------------------- */
 div.mt-10p {
@@ -95,14 +124,46 @@ div.mt-20p {
 
 /* Responsive for homepage */
 @media only screen and (max-width: 1070px) {
+  div.logo {
+    background-image: url('assets/images/hodo.png');
+    width: 300px;
+    height: 72px;
+    background-size: cover;
+  }
+
   div.stage {
-    width: 95%;
+    width: 90%;
+  }
+  main.stage-row-houseCards {
+    margin-top: 100px;
   }
   section.houseCard {
-    height: 320px;
+    height: 280px;
     width: 80%;
     margin-right: 0;
     margin-bottom: 20px;
+  }
+  h1.houseCard-spot {
+    font-size: 20px;
+  }
+  h2.houseCard-name {
+    font-size: 20px;
+  }
+  h3.houseCard-score {
+    font-size: 60px;
+  }
+  h4.houseCard-weekscore {
+    font-size: 17px;
+  }
+
+  div.stage-row-description {
+    flex-direction: column;
+  }
+  .stage-row-card {
+    width: 80%;
+  }
+  .stage-row-card:last-child {
+    margin-top: 25px;
   }
 }
 
