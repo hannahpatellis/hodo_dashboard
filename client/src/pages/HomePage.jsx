@@ -6,7 +6,6 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import 'react-accessible-accordion/dist/fancy-example.css';
 
 import API from '../utils/API';
 
@@ -69,7 +68,7 @@ class HomePage extends React.Component {
 
     // Get the house points
     this.getData();
-    
+
     // Get the challenges
     this.getChallenges();
   }
@@ -116,36 +115,24 @@ class HomePage extends React.Component {
         <section className='stage-row'>
           <h1>Challenges</h1>
           <div className='stage-row-challenges'>
-            <Accordion>
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    What harsh truths do you prefer to ignore?
+            <Accordion
+              allowMultipleExpanded={true}>
+              {this.state.challenges.map((item, i) => (
+                <AccordionItem key={i}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <span className='challenges-title'>{item.title}</span> <span className='challenges-pointValue'><strong>{item.points}{item.plus ? '+' : ''} points</strong></span>
                     </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <p>
-                    Exercitation in fugiat est ut ad ea cupidatat ut in
-                    cupidatat occaecat ut occaecat consequat est minim minim
-                    esse tempor laborum consequat esse adipisicing eu
-                    reprehenderit enim.
-                    </p>
-                </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    Is free will real or just an illusion?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <p>
-                    In ad velit in ex nostrud dolore cupidatat consectetur
-                    ea in ut nostrud velit in irure cillum tempor laboris
-                    sed adipisicing eu esse duis nulla non.
-                    </p>
-                </AccordionItemPanel>
-              </AccordionItem>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <ul>
+                    {item.details.map((detail, id) => (
+                      <li>{detail}</li>
+                    ))}
+                    </ul>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </section>
