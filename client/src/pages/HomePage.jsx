@@ -22,6 +22,7 @@ class HomePage extends React.Component {
 
   state = {
     data: [],
+    challenges: [],
     places: [
       'st',
       'nd',
@@ -46,12 +47,31 @@ class HomePage extends React.Component {
       });
   }
 
+  getChallenges = () => {
+    API.challenges()
+      .then(res => {
+        // const data = res.data.sort((a, b) => {
+        //   if (a.points > b.points)
+        //     return -1;
+        //   if (a.points < b.points)
+        //     return 1;
+        //   return 0;
+        // });
+        this.setState({
+          challenges: res.data
+        });
+      });
+  }
+
   componentDidMount() {
     // Update authenticated state on logout
     this.props.toggleAuthenticateStatus();
 
     // Get the house points
     this.getData();
+    
+    // Get the challenges
+    this.getChallenges();
   }
 
   render() {
