@@ -10,6 +10,7 @@ import {
 import API from '../utils/API';
 
 const logo = require('../images/hodo.png');
+const gDocsLogo = require('../images/googledocs.png');
 
 const houseIcons = {
   Gestalt: require('../images/Gestalt.png'),
@@ -26,7 +27,9 @@ class HomePage extends React.Component {
       'st',
       'nd',
       'rd'
-    ]
+    ],
+    challengeDocLocation: 'https://docs.google.com/document/d/1HdUdlh1OV3E-MDHv7CJiWm_A8QZRs32HTmq5iRC18pc/edit?usp=sharing',
+    guideDocLocation: 'https://docs.google.com/document/d/11wNJKiOVrN9Y4y1gZhS1_mbAiu7zTDaqEHncf4reiGg/edit?usp=sharing'
   }
 
   // Fetch house points and sort by point value
@@ -101,13 +104,17 @@ class HomePage extends React.Component {
           <h1>How to play</h1>
           <div className='stage-row-description'>
             <article className='stage-row-card'>
-              <p>At the beginning of class you were split up into houses. Complete any of the challenges listed below and earn points for you house. When the Houses of Design Olympics Cup comes, the house with the most points gets some prizes! Plus, there’s fun and food. Every week, the house that earns the most points for that week “gets The Owl.” Whatever house has The Owl gets and extra 48 hours to turn in their homework for that week.</p>
+              <p>At the beginning of class you were split up into houses. Complete any of the challenges listed below and earn points for you house. When the House Cup comes, the house with the most points gets some prizes! Plus, there’s fun and food. Every week the house that earns the most points for that week “gets The Owl.” Whatever house has The Owl gets and extra 48 hours to turn in their homework for that week.</p>
             </article>
             <aside className='stage-row-card stage-row-card-outline'>
-              <ul>
-                <li>Read the full rundown on <br />Google Docs</li>
-                <li>Get challenges on <br />Google Docs</li>
-              </ul>
+              <div className='outline-row'>
+                <div className='outline-image'><a href={this.state.guideDocLocation}><img src={gDocsLogo} alt='Read the full rundown on Google Docs' /></a></div>
+                <div className='outline-text'><a href={this.state.guideDocLocation}>Read the full rundown on <br />Google Docs</a></div>
+              </div>
+              <div className='outline-row'>
+                <div className='outline-image'><a href={this.state.challengeDocLocation}><img src={gDocsLogo} alt='Get the challenges on Google Docs' /></a></div>
+                <div className='outline-text'><a href={this.state.challengeDocLocation}>Get the challenges on <br />Google Docs</a></div>
+              </div>
             </aside>
           </div>
         </section>
@@ -126,9 +133,9 @@ class HomePage extends React.Component {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <ul>
-                    {item.details.map((detail, id) => (
-                      <li>{detail}</li>
-                    ))}
+                      {item.details.map((detail, id) => (
+                        <li>{detail}</li>
+                      ))}
                     </ul>
                   </AccordionItemPanel>
                 </AccordionItem>

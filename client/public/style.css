@@ -31,7 +31,7 @@ div.logo {
 
 div.stage {
   margin: 0 auto;
-  width: 80%;
+  width: 67%;
 }
 .stage-row {
   margin-top: 50px;
@@ -102,9 +102,28 @@ div.stage-row-description {
 .stage-row-card {
   width: 40%;
 }
-.stage-row-card-outline {
+aside.stage-row-card-outline {
+  padding: 20px;
   border: 3px solid black;
   border-radius: 25px;
+}
+div.outline-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+}
+div.outline-row a {
+  color: #4b4b4b;
+  text-decoration: underline;
+}
+div.outline-row:first-child {
+  margin-bottom: 20px;
+}
+div.outline-text {
+  width: 100%;
 }
 
 div.stage-row-challenges {
@@ -177,6 +196,12 @@ div.mt-20p {
   margin-top: 20%;
 }
 
+@media only screen and (max-width: 1370px) {
+  div.stage {
+    width: 90%;
+  }
+}
+
 /* Responsive for homepage */
 @media only screen and (max-width: 1070px) {
   div.logo {
@@ -219,6 +244,10 @@ div.mt-20p {
   }
   .stage-row-card:last-child {
     margin-top: 25px;
+  }
+
+  div.outline-text {
+    font-size: 0.9rem;
   }
 
   span.challenges-pointValue {
