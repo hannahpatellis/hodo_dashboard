@@ -38,9 +38,9 @@ class App extends Component {
       <div>
         <Router>
             <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
-            <PrivateRoute path="/dashboard" component={DashboardPage}/>
+            <PrivateRoute path="/dashboard" component={DashboardPage} />
             <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
-            <LoggedOutRoute path="/signup" component={SignUpPage}/>
+            <LoggedOutRoute path="/signup" component={SignUpPage} />
             <Route path="/logout" component={LogoutFunction}/>
         </Router>
       </div>

@@ -8,7 +8,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       <Component {...props} {...rest} />
     ) : (
       <Redirect to={{
-        pathname: '/',
+        pathname: '/login',
         state: { from: props.location }
       }}/>
     )
@@ -19,7 +19,7 @@ const LoggedOutRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     Auth.isUserAuthenticated() ? (
       <Redirect to={{
-        pathname: '/',
+        pathname: '/dashboard',
         state: { from: props.location }
       }}/>
     ) : (
