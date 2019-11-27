@@ -34,7 +34,7 @@
     {
         "title": "Design for Daily UI",
         "points": 10,
-        "plus": false,
+        "plus": true,
         "details": [
             "Get 10 points for every Daily UI challenge you do (https://www.dailyui.co/)",
             "Can be earned an unlimited number of times each week",
