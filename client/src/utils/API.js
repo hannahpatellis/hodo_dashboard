@@ -1,8 +1,10 @@
 import axios from "axios";
 
 export default {
-  login: userData =>
-    axios.post('/auth/login', userData),
+  login: userData => {
+    userData.username = userData.username.toLowerCase();
+    return axios.post('/auth/login', userData);
+  },
   signUp: userData =>
     axios.post('/auth/signup', userData),
   dashboard: () =>

@@ -3,8 +3,6 @@ import Auth from '../utils/Auth';
 import API from '../utils/API';
 import { Link } from 'react-router-dom';
 
-const logo = require('../images/hodo.png');
-
 const houseIcons = {
   Gestalt: require('../images/Gestalt.png'),
   Heuristics: require('../images/Heuristics.png'),
@@ -72,7 +70,7 @@ class DashboardPage extends React.Component {
       <div className='container'>
         <div className='row admin-nav'>
           <div className='admin-logo'>
-            <img src={logo} alt='Houses of Design Olympics' width='400px' />
+            <div className='logo'></div>
           </div>
           <div className='admin-nav-right'>
             <Link to='/logout' className='admin-nav-right'>Logout</Link>

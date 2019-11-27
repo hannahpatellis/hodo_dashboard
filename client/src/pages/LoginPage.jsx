@@ -2,8 +2,6 @@ import React from 'react';
 import Auth from '../utils/Auth';
 import API from '../utils/API';
 
-const logo = require('../images/hodo.png');
-
 class LoginPage extends React.Component {
   state = {
     errors: {},
@@ -82,7 +80,7 @@ class LoginPage extends React.Component {
       <div className='container'>
         <div className='row'>
           <div className='admin-logo'>
-            <img src={logo} alt='Houses of Design Olympics' width='400px' />
+            <div className='logo'></div>
           </div>
         </div>
         <div className='row mt-20p'>
@@ -91,6 +89,7 @@ class LoginPage extends React.Component {
             <form action='/' onSubmit={this.processForm}>
 
               {this.state.successMessage && <p className='text-success'>{this.state.successMessage}</p>}
+              {this.state.errors.summary  && <p className='text-error'> {this.state.errors.summary}</p>}
 
               <div>
                 <label htmlFor='login-form-username'>Username</label>

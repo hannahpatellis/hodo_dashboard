@@ -1,8 +1,6 @@
 import React from 'react';
 import API from '../utils/API';
 
-const logo = require('../images/hodo.png');
-
 class SignUpPage extends React.Component {
   // set the initial component state
   state = {
@@ -69,7 +67,7 @@ class SignUpPage extends React.Component {
       <div className='container'>
         <div className='row'>
           <div className='admin-logo'>
-            <img src={logo} alt='Houses of Design Olympics' width='400px' />
+            <div className='logo'></div>
           </div>
         </div>
         <div className='row mt-10p'>
