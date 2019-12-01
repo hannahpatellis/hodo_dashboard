@@ -122,8 +122,7 @@ class HomePage extends React.Component {
         <section className='stage-row'>
           <h1>Challenges</h1>
           <div className='stage-row-challenges'>
-            <Accordion
-              allowMultipleExpanded={true}>
+            <Accordion allowMultipleExpanded={true}>
               {this.state.challenges.map((item, i) => (
                 <AccordionItem key={i}>
                   <AccordionItemHeading>
