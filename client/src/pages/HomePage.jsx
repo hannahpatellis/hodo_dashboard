@@ -15,7 +15,8 @@ const gDocsLogo = require('../images/googledocs.png');
 const houseIcons = {
   Gestalt: require('../images/Gestalt.png'),
   Heuristics: require('../images/Heuristics.png'),
-  Context: require('../images/Context.png')
+  Context: require('../images/Context.png'),
+  Aesthetics: require('../images/Aesthetics.png')
 }
 
 class HomePage extends React.Component {
@@ -26,7 +27,8 @@ class HomePage extends React.Component {
     places: [
       'st',
       'nd',
-      'rd'
+      'rd',
+      'th'
     ],
     challengeDocLocation: 'https://docs.google.com/document/d/1HdUdlh1OV3E-MDHv7CJiWm_A8QZRs32HTmq5iRC18pc/edit?usp=sharing',
     guideDocLocation: 'https://docs.google.com/document/d/11wNJKiOVrN9Y4y1gZhS1_mbAiu7zTDaqEHncf4reiGg/edit?usp=sharing'
@@ -83,9 +85,9 @@ class HomePage extends React.Component {
         <header className='stage-row'>
           <div className='logo'></div>
           {/* <img className='header-logo' src={logo} alt='Houses of Design Olympics' width='450px' /> */}
-          <aside className='infobox'>
+          {/* <aside className='infobox'>
 
-          </aside>
+          </aside> */}
         </header>
 
         <main className='stage-row stage-row-houseCards'>
@@ -108,12 +110,12 @@ class HomePage extends React.Component {
             </article>
             <aside className='stage-row-card stage-row-card-outline'>
               <div className='outline-row'>
-                <div className='outline-image'><a href={this.state.guideDocLocation}><img src={gDocsLogo} alt='Read the full rundown on Google Docs' /></a></div>
-                <div className='outline-text'><a href={this.state.guideDocLocation}>Read the full rundown on <br />Google Docs</a></div>
+                <div className='outline-image'><a href={this.state.guideDocLocation} title='Read the full rundown on Google Docs'><img src={gDocsLogo} alt='Read the full rundown on Google Docs' /></a></div>
+                <div className='outline-text'><a href={this.state.guideDocLocation} title='Read the full rundown on Google Docs'>Read the full rundown on <br />Google Docs</a></div>
               </div>
               <div className='outline-row'>
-                <div className='outline-image'><a href={this.state.challengeDocLocation}><img src={gDocsLogo} alt='Get the challenges on Google Docs' /></a></div>
-                <div className='outline-text'><a href={this.state.challengeDocLocation}>Get the challenges on <br />Google Docs</a></div>
+                <div className='outline-image'><a href={this.state.challengeDocLocation} title='Get the challenges on Google Docs'><img src={gDocsLogo} alt='Get the challenges on Google Docs' /></a></div>
+                <div className='outline-text'><a href={this.state.challengeDocLocation} title='Get the challenges on Google Docs'>Get the challenges on <br />Google Docs</a></div>
               </div>
             </aside>
           </div>
