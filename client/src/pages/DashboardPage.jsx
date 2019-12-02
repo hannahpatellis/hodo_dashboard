@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 const houseIcons = {
   Gestalt: require('../images/Gestalt.png'),
   Heuristics: require('../images/Heuristics.png'),
-  Context: require('../images/Context.png')
+  Context: require('../images/Context.png'),
+  Aesthetics: require('../images/Aesthetics.png')
 }
 
 class DashboardPage extends React.Component {
@@ -15,7 +16,8 @@ class DashboardPage extends React.Component {
     user: {},
     Gestalt: 0,
     Heuristics: 0,
-    Context: 0
+    Context: 0,
+    Aesthetics: 0
   }
 
   getData = () => {
@@ -81,7 +83,7 @@ class DashboardPage extends React.Component {
         <div className='row mt-10p'>
 
           {this.state.data ? this.state.data.map(item => (
-            <div className='col-12 col-md-4 col-xl-4 mb-5' key={item.house}>
+            <div className='col-12 col-md-12 col-lg-3 col-xl-3 mb-5' key={item.house}>
 
               <div className='card'>
                 <div className='card-body text-center'>
