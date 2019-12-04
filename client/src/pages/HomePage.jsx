@@ -16,7 +16,11 @@ const houseIcons = {
   Gestalt: require('../images/Gestalt.png'),
   Heuristics: require('../images/Heuristics.png'),
   Context: require('../images/Context.png'),
-  Aesthetics: require('../images/Aesthetics.png')
+  Aesthetics: require('../images/Aesthetics.png'),
+  GestaltOwl: require('../images/Gestalt-Owl.png'),
+  HeuristicsOwl: require('../images/Heuristics-Owl.png'),
+  ContextOwl: require('../images/Context-Owl.png'),
+  AestheticsOwl: require('../images/Aesthetics-Owl.png')
 }
 
 class HomePage extends React.Component {
@@ -93,7 +97,7 @@ class HomePage extends React.Component {
         <main className='stage-row stage-row-houseCards'>
           {this.state.data.map((item, i) => (
             <section className='houseCard' key={i} style={{ border: `3px solid #${item.hex}` }}>
-              <img className='houseCard-icon' src={houseIcons[item.house]} height='70px' alt={`House of ${item.house}`} />
+              <img className='houseCard-icon' src={item.owl ? houseIcons[item.house+'Owl'] : houseIcons[item.house]} height='100px' alt={`House of ${item.house}`} />
               <h1 className='houseCard-spot'>{i + 1}<sup>{this.state.places[i]}</sup> Place</h1>
               <h2 className='houseCard-name'>House of {item.house}</h2>
               <h3 className='houseCard-score'>{item.points}</h3>
