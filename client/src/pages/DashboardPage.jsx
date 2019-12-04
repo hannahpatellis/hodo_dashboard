@@ -7,7 +7,11 @@ const houseIcons = {
   Gestalt: require('../images/Gestalt.png'),
   Heuristics: require('../images/Heuristics.png'),
   Context: require('../images/Context.png'),
-  Aesthetics: require('../images/Aesthetics.png')
+  Aesthetics: require('../images/Aesthetics.png'),
+  GestaltOwl: require('../images/Gestalt-Owl.png'),
+  HeuristicsOwl: require('../images/Heuristics-Owl.png'),
+  ContextOwl: require('../images/Context-Owl.png'),
+  AestheticsOwl: require('../images/Aesthetics-Owl.png')
 }
 
 class DashboardPage extends React.Component {
@@ -87,7 +91,7 @@ class DashboardPage extends React.Component {
 
               <div className='card'>
                 <div className='card-body text-center'>
-                  <img className='admin-houseimg' height='85' src={houseIcons[item.house]} alt={item.house} />
+                  <img className='admin-houseimg' height='85' src={item.owl ? houseIcons[item.house+'Owl'] : houseIcons[item.house]} alt={item.house} />
                   <h5>House of {item.house}</h5>
                   <h6 className='mb-2 text-muted'>House TA: {item.head}</h6>
                   <h1><strong>{item.points}</strong></h1>
