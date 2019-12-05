@@ -27,8 +27,23 @@ class DashboardPage extends React.Component {
   getData = () => {
     API.dashboard()
       .then(res => {
+        let dataHolder = res.data;
+
+        dataHolder.sort((a, b) => {
+          const houseA = a.house.toLowerCase();
+          const houseB = b.house.toLowerCase();
+        
+          let comparison = 0;
+          if (houseA > houseB) {
+            comparison = 1;
+          } else if (houseA < houseB) {
+            comparison = -1;
+          }
+          return comparison;
+        });
+        
         this.setState({
-          data: res.data
+          data: dataHolder
         });
       });
   }
